@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /entrar/
+
+Sitemap: https://gestaoconcreta.net/sitemap.xml
