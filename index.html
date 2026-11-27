@@ -1,27 +1,228 @@
 <!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestão Concreta — ERP de produção e financeiro para fábricas e indústrias</title>
-    <meta name="description" content="Gestão Concreta é o ERP em nuvem para fábricas e indústrias: ordens de produção, apontamento, custo real por peça, estoque, fluxo de caixa e DRE no mesmo painel." />
-    <meta name="theme-color" content="#0B30AC" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="preload" href="/fontes/Sora-variavel.ttf" as="font" type="font/ttf" crossorigin />
-    <script>
-      (function(){try{var p=Object.assign({fonte:100,tema:"claro",contraste:"normal",movimento:"sistema"},JSON.parse(localStorage.getItem("gc-acessibilidade")||"{}"));var d=document.documentElement;var esc=p.tema==="escuro"||(p.tema==="sistema"&&matchMedia("(prefers-color-scheme: dark)").matches);d.dataset.tema=esc?"escuro":"claro";d.dataset.contraste=p.contraste;var red=p.movimento==="reduzido"||(p.movimento==="sistema"&&matchMedia("(prefers-reduced-motion: reduce)").matches);d.dataset.movimento=red?"reduzido":"normal";d.style.setProperty("--escala-fonte",p.fonte+"%")}catch(e){}})();
-    </script>
-    <script type="module" crossorigin src="/assets/index-2aFtYU4W.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-1H3rqLZ9.css">
-      <link rel="canonical" href="https://gestaoconcreta.net/" />
-    <meta property="og:title" content="Gestão Concreta — ERP de produção e financeiro para fábricas e indústrias" />
-    <meta property="og:description" content="Gestão Concreta é o ERP em nuvem para fábricas e indústrias: ordens de produção, apontamento, custo real por peça, estoque, fluxo de caixa e DRE no mesmo painel." />
-    <meta property="og:url" content="https://gestaoconcreta.net/" />
-    <meta property="og:locale" content="pt_BR" />
-  </head>
-  <body>
-    <div id="raiz"></div>
-  </body>
+<html lang="pt-BR" data-tema="claro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestão Concreta — ERP em nuvem para fábricas e indústrias</title>
+<meta name="description" content="ERP em nuvem de gestão de produção e gestão financeira para fábricas e indústrias. Planeje ordens, aponte a produção, saiba o custo real de cada peça e veja o caixa do mês em um só sistema.">
+<script>
+  (function () {
+    var p = {}; try { p = JSON.parse(localStorage.getItem('gc-acessibilidade') || '{}') } catch (e) {}
+    var h = document.documentElement
+    h.setAttribute('data-tema', p.tema || (matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro'))
+    if (p.contraste) h.classList.add('alto-contraste')
+    if (p.animacoes === 'reduzir') h.classList.add('reduzir-animacoes')
+    if (p.fonte) h.style.fontSize = p.fonte + '%'
+  })()
+</script>
+<link rel="icon" href="/favicon.ico">
+<link rel="preload" href="/fontes/Sora-variavel.ttf" as="font" type="font/ttf" crossorigin>
+  <script type="module" crossorigin src="/assets/index-CgFJPqzv.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Bvg_erd0.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo" id="topo">
+  <nav class="miolo barra" aria-label="Principal">
+    <a class="marca" href="#inicio" aria-label="Gestão Concreta — início"><img class="logo-claro" src="/marca/logo.png" alt="Gestão Concreta" height="32"><img class="logo-escuro" src="/marca/logo-negativa.png" alt="Gestão Concreta" height="32"></a>
+    <ul class="links" id="menu">
+      <li class="produtos">
+        <button type="button" id="btn-produtos" aria-expanded="false" aria-controls="menu-produtos">Produtos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="cartao-menu" id="menu-produtos" hidden>
+          <a href="#recursos"><b>Gestão de produção</b><span>Ordens, apontamento, cura, qualidade e OEE</span></a>
+          <a href="#recursos"><b>Gestão financeira</b><span>Fluxo de caixa, contas, conciliação e DRE</span></a>
+          <a href="#recursos"><b>Custos e estoque</b><span>Custo real por peça, insumos e produto acabado</span></a>
+        </div>
+      </li>
+      <li><a href="#planos">Planos</a></li>
+      <li><a href="#seguranca">Segurança</a></li>
+      <li><a href="#materiais">Materiais</a></li>
+      <li class="so-celular"><a href="#duvidas">Dúvidas</a></li>
+      <li class="so-celular"><a href="https://gestaoconcreta.net/calculadora-traco-bloco-paver/">Calculadora de Traço e Custo</a></li>
+      <li class="so-celular"><a href="https://gestaoconcreta.net/guias/">Guias 2027</a></li>
+    </ul>
+    <div class="acoes">
+      <a class="link-fraco" href="#contato">Começar agora</a>
+      <a class="btn btn-sm" href="https://gestaoconcreta.net/entrar/"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>Acessar</a>
+      <button class="btn-icone" id="btn-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
+    </div>
+  </nav>
+  <div class="progresso" id="progresso" aria-hidden="true"></div>
+</header>
+
+<main id="conteudo">
+
+  <!-- topo -->
+  <section id="inicio" class="abertura">
+    <div class="miolo centro">
+      <p class="selo"><i></i> ERP em nuvem para fábricas e indústrias</p>
+      <h1><span class="degrade">Fábrica</span>—produção e financeiro no mesmo painel</h1>
+      <p class="lide">Planeje ordens, aponte a produção, saiba o custo real de cada peça e veja o caixa do mês em um só sistema — do pedido ao DRE, sem planilhas paralelas.</p>
+      <div class="ctas">
+        <a class="btn fantasma" href="#contato">Falar com um especialista</a>
+        <a class="btn" href="#contato">Começar agora<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <div class="miolo">
+      <div class="palco">
+        <canvas id="cena-prensa" role="img" aria-label="Animação em 3D de uma vibroprensa de blocos: o carro alimentador enche o molde, o cabeçote prensa e vibra, e o palete de blocos segue pela esteira."></canvas>
+        <div class="flutuante" aria-hidden="true">
+          <p>Ordem concluída · <b>2.400 peças</b></p>
+          <div class="flutuante-linha"><span><i class="c-ciano"></i> OP-2611</span><em></em><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span><i class="c-verde"></i> Expedição</span></div>
+        </div>
+        <p class="legenda">Animação 3D ilustrativa — a vibroprensa, o palete e a esteira, com dados ilustrativos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- benefícios -->
+  <section class="miolo bloco" aria-labelledby="t-beneficios">
+    <p class="rotulo-secao reaparece">Por que um ERP industrial</p>
+    <h2 id="t-beneficios" class="grande reaparece">Gerir uma fábrica é complicado, mas não precisa ser <span class="degrade">espalhado</span>. Produção, custos, estoque, vendas e financeiro conversam no mesmo sistema.</h2>
+    <div class="tres">
+      <div class="numero reaparece"><p class="n"><span data-conta="64">64</span></p><p>telas integradas, do pedido ao DRE</p></div>
+      <div class="numero reaparece"><p class="n"><span data-conta="6">6</span></p><p>módulos: produção, custos, vendas, fiscal, financeiro e estoque</p></div>
+      <div class="numero reaparece"><p class="n"><span data-conta="100" data-sufixo="%">100%</span></p><p>na nuvem — abre no navegador, sem servidor na fábrica</p></div>
+    </div>
+  </section>
+
+  <!-- recursos -->
+  <section id="recursos" class="recursos" aria-labelledby="t-recursos">
+    <div class="miolo">
+      <p class="rotulo-secao reaparece">Recursos</p>
+      <h2 id="t-recursos" class="medio reaparece">Do chão de fábrica ao caixa, num fluxo só</h2>
+      <div class="rec-grade">
+        <div class="rec-fixo"><div class="rec-quadro" id="rec-quadro"><div class="rec-visuais" id="rec-visuais"></div><p class="rec-pagina"><b id="rec-n">01</b> / 03</p></div></div>
+        <ol class="rec-passos" id="rec-passos">
+          <li data-i="0"><div><p class="num">01</p><h3>Ordem de produção em minutos</h3><p>Crie a ordem a partir do pedido ou do estoque mínimo. O sistema puxa o traço, reserva os insumos, indica a linha e acompanha cura e qualidade até a expedição.</p><div class="visual-cel" data-visual="0"></div></div></li>
+          <li data-i="1"><div><p class="num">02</p><h3>Custo real de cada peça</h3><p>Matéria-prima, perdas, custo fixo, comissão e frete calculados com o que a fábrica realmente gastou. Você vê a margem de cada produto antes de dar desconto.</p><div class="visual-cel" data-visual="1"></div></div></li>
+          <li data-i="2"><div><p class="num">03</p><h3>Financeiro e DRE integrados</h3><p>Contas a pagar e receber, conciliação, fluxo de caixa projetado e DRE alimentados pela operação. O fechamento do mês deixa de ser uma semana de planilhas.</p><div class="visual-cel" data-visual="2"></div></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- segurança -->
+  <section id="seguranca" class="miolo bloco" aria-labelledby="t-seg">
+    <div class="duas">
+      <div>
+        <p class="rotulo-secao reaparece">Segurança e controle</p>
+        <h2 id="t-seg" class="medio reaparece">Cada pessoa vê só o que precisa — e tudo fica registrado</h2>
+        <ul class="icones">
+          <li class="reaparece"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M16 5a3 3 0 010 6M18 15c2 .6 3 2.2 3 5"/></svg></span><span><b>Permissões por perfil</b>Diretoria, produção, vendas, financeiro e expedição com acessos diferentes.</span></li>
+          <li class="reaparece"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></span><span><b>Senha protegida</b>Bloqueio automático depois de várias tentativas erradas de senha.</span></li>
+          <li class="reaparece"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.5-8 9-4.8-1.5-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span><b>Conexão criptografada</b>Acesso por HTTPS, com cabeçalhos de segurança ativos.</span></li>
+          <li class="reaparece"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4 4 0 010-8 5.5 5.5 0 0110.6 1.2A3.5 3.5 0 0117 18z"/></svg></span><span><b>Sem servidor na fábrica</b>Os dados ficam na nuvem; o sistema abre no navegador.</span></li>
+        </ul>
+      </div>
+      <div class="cartao tabela-perm reaparece" id="perm"></div>
+    </div>
+  </section>
+
+  <!-- planos -->
+  <section id="planos" class="planos" aria-labelledby="t-planos">
+    <div class="miolo planos-grade">
+      <p class="rotulo-secao claro reaparece">Planos</p>
+      <div>
+        <h2 id="t-planos" class="enorme reaparece">Uma mensalidade <span class="mudo">por fábrica</span></h2>
+        <p class="peq reaparece">Plano único, com tudo incluído:</p>
+        <ul class="inclui">
+          <li class="reaparece">Produção, custos, estoque, vendas, fiscal e financeiro</li>
+          <li class="reaparece">Usuários com permissões por perfil</li>
+          <li class="reaparece">Implantação acompanhada e importação dos seus cadastros</li>
+          <li class="reaparece">Atualizações e suporte por e-mail</li>
+          <li class="reaparece mais">Mais unidades fabris e integrações sob medida, sob consulta</li>
+        </ul>
+        <div class="simulador reaparece">
+          <p class="sim-tit">Quanto a perda está custando hoje?</p>
+          <p class="sim-sub">Simulação ilustrativa — ajuste com os números da sua fábrica.</p>
+          <div class="sim-faixas">
+            <div><div class="sim-linha"><label for="f-pecas">Peças por mês</label><output id="o-pecas" for="f-pecas"></output></div><input id="f-pecas" type="range" min="10000" max="400000" step="5000" value="120000"></div>
+            <div><div class="sim-linha"><label for="f-custo">Custo médio por peça</label><output id="o-custo" for="f-custo"></output></div><input id="f-custo" type="range" min="0.5" max="15" step="0.1" value="2.2"></div>
+            <div><div class="sim-linha"><label for="f-perda">Perda atual</label><output id="o-perda" for="f-perda"></output></div><input id="f-perda" type="range" min="1" max="12" step="0.5" value="5"></div>
+          </div>
+          <div class="sim-res" aria-live="polite">
+            <div><p>Perda por mês</p><b id="r-mes"></b></div>
+            <div class="destaque"><p id="r-txt"></p><b id="r-ano"></b></div>
+          </div>
+        </div>
+        <div class="ctas reaparece"><a class="btn claro" href="#contato">Pedir proposta</a><a class="btn contorno-claro" href="#duvidas">Ver dúvidas frequentes</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- dúvidas -->
+  <section id="duvidas" class="miolo bloco" aria-labelledby="t-duvidas">
+    <div class="duvidas-grade">
+      <div>
+        <p class="rotulo-secao reaparece">Dúvidas</p>
+        <h2 id="t-duvidas" class="medio reaparece">Tudo o que você precisa saber</h2>
+        <p class="suave reaparece">Não achou sua pergunta? Escreva para <a href="mailto:contato@gestaoconcreta.net">contato@gestaoconcreta.net</a>.</p>
+      </div>
+      <div class="acordeao" id="duvidas-lista"></div>
+    </div>
+  </section>
+
+  <!-- chamada final -->
+  <section id="contato" class="miolo" aria-labelledby="t-cta">
+    <div class="chamada reaparece">
+      <img class="girar-lento" src="/marca/simbolo.png" alt="" aria-hidden="true">
+      <h2 id="t-cta">Pronto para ver sua fábrica num painel só?</h2>
+      <p>Mostramos o sistema com os produtos e o fluxo da sua fábrica. Leva 30 minutos e você sai com uma proposta.</p>
+      <div class="ctas"><a class="btn" href="mailto:contato@gestaoconcreta.net?subject=Quero%20conhecer%20o%20Gest%C3%A3o%20Concreta">Agendar demonstração<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M13 6l6 6-6 6"/></svg></a><a class="btn email" href="mailto:contato@gestaoconcreta.net">contato@gestaoconcreta.net</a></div>
+    </div>
+  </section>
+
+  <!-- chão de fábrica -->
+  <section class="miolo chao-secao" aria-labelledby="t-chao">
+    <div class="chao reaparece">
+      <div class="chao-texto">
+        <h2 id="t-chao">Apontamento direto do chão de fábrica?</h2>
+        <p>O operador registra peças boas, refugo e paradas pelo navegador do celular ou do tablet. A produção aparece no painel na mesma hora — sem papel e sem digitar de novo.</p>
+        <a class="btn claro" href="#contato">Quero ver funcionando</a>
+      </div>
+      <div class="chao-cena">
+        <canvas id="cena-esteira" role="img" aria-label="Animação em 3D de uma esteira levando paletes de blocos para a cura e a expedição."></canvas>
+        <div class="apontadas" aria-hidden="true"><i class="pulso"></i><div><b id="apontadas">+240 pç</b><small>apontadas agora</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- materiais -->
+  <section id="materiais" class="miolo bloco" aria-labelledby="t-mat">
+    <p class="rotulo-secao reaparece">Materiais</p>
+    <h2 id="t-mat" class="medio reaparece">Para começar com o pé direito</h2>
+    <div class="tres materiais">
+      <a class="cartao material reaparece" href="mailto:contato@gestaoconcreta.net?subject=Material%3A%20Guia%20de%20implanta%C3%A7%C3%A3o"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h10a3 3 0 013 3v13H8a3 3 0 01-3-3z"/><path d="M5 17a3 3 0 013-3h10"/></svg></span><h3>Guia de implantação</h3><p>O passo a passo dos primeiros 30 dias: cadastros, traços, permissões e primeiro fechamento.</p><span class="mais-link">Pedir por e-mail →</span></a>
+      <a class="cartao material reaparece" href="mailto:contato@gestaoconcreta.net?subject=Material%3A%20Como%20calcular%20o%20custo%20por%20pe%C3%A7a"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg></span><h3>Como calcular o custo por peça</h3><p>Traço, perdas e rateio do custo fixo explicados com um exemplo de bloco de concreto.</p><span class="mais-link">Pedir por e-mail →</span></a>
+      <a class="cartao material reaparece" href="mailto:contato@gestaoconcreta.net?subject=Material%3A%20Tutoriais%20em%20v%C3%ADdeo"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l5 3.5-5 3.5z"/></svg></span><h3>Tutoriais em vídeo</h3><p>Vídeos curtos de cada tela: ordem de produção, apontamento, contas e DRE.</p><span class="mais-link">Pedir por e-mail →</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="miolo rodape-grade">
+    <div><img class="logo-claro" src="/marca/logo.png" alt="Gestão Concreta" height="36"><img class="logo-escuro" src="/marca/logo-negativa.png" alt="Gestão Concreta" height="36"><p>ERP em nuvem de gestão de produção e gestão financeira para fábricas e indústrias.</p></div>
+    <nav aria-label="Produto"><p class="rt">Produto</p><ul><li><a href="#recursos">Produção</a></li><li><a href="#recursos">Custos</a></li><li><a href="#recursos">Financeiro</a></li><li><a href="#planos">Planos</a></li></ul></nav>
+    <nav aria-label="Empresa"><p class="rt">Empresa</p><ul><li><a href="#seguranca">Segurança</a></li><li><a href="#materiais">Materiais</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></nav>
+    <nav aria-label="Contato"><p class="rt">Contato</p><ul><li><a href="mailto:contato@gestaoconcreta.net">contato@gestaoconcreta.net</a></li><li><a href="https://gestaoconcreta.net/entrar/">Acessar o sistema</a></li></ul></nav>
+  </div>
+  <nav class="rodape-legal" aria-label="Ferramentas e documentos"><a href="https://gestaoconcreta.net/calculadora-traco-bloco-paver/">Calculadora de Traço e Custo</a><span aria-hidden="true">•</span><a href="https://gestaoconcreta.net/guias/">Guias 2027</a><span aria-hidden="true">•</span><a href="https://gestaoconcreta.net/privacidade/">Privacidade</a><span aria-hidden="true">•</span><a href="https://gestaoconcreta.net/termos/">Termos de Uso</a></nav>
+  <p class="rodape-fim">© 2026 Gestão Concreta. Dados das telas são ilustrativos.</p>
+</footer>
+
+<div class="a11y" id="a11y">
+  <button class="a11y-btn" id="a11y-abrir" type="button" aria-expanded="false" aria-controls="a11y-painel" aria-label="Acessibilidade"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.6"/><path d="M5 8.5l7 1.5 7-1.5M12 10v4.5M8.5 20l3.5-5.5 3.5 5.5"/></svg></button>
+  <div class="a11y-painel" id="a11y-painel" role="group" aria-label="Opções de acessibilidade" hidden>
+    <p class="a11y-tit">Acessibilidade</p>
+    <div class="a11y-linha"><span>Tamanho da letra</span><span><button type="button" data-a="fonte-menos" aria-label="Diminuir a letra">A−</button><button type="button" data-a="fonte-mais" aria-label="Aumentar a letra">A+</button></span></div>
+    <div class="a11y-linha"><span>Tema</span><button type="button" data-a="tema" id="a11y-tema">Escuro</button></div>
+    <div class="a11y-linha"><span>Alto contraste</span><button type="button" data-a="contraste" id="a11y-contraste" aria-pressed="false">Desligado</button></div>
+    <div class="a11y-linha"><span>Animações</span><button type="button" data-a="animacoes" id="a11y-animacoes">Do sistema</button></div>
+    <button type="button" class="a11y-zerar" data-a="zerar">Restaurar padrão</button>
+  </div>
+</div>
+
+</body>
 </html>
